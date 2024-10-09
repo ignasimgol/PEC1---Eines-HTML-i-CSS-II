@@ -1,4 +1,16 @@
 {
- "extends": ["stylelint-config-recommended-scss"],
- "rules": {}
-}
+    "extends": ["stylelint-config-recommended-scss"],
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "rules": {
+      "indentation": 2,
+      "color-hex-length": "short",
+      "max-nesting-depth": 3,
+      "selector-max-id": 0,
+      "scss/at-rule-no-unknown": true,
+      "scss/dollar-variable-pattern": "^foo",
+      "no-descending-specificity": null
+    }
+  }
+  

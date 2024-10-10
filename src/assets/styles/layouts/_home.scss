@@ -73,6 +73,19 @@ header {
   }
 }
 
+.svg-link {
+  color: white; /* Color blanco por defecto */
+}
+
+.svg-link:hover {
+  color: yellow; /* Cambia a amarillo en hover */
+}
+
+.git-icon {
+  width: 24px;
+  height: 24px;
+}
+
 
 
 .uoc-footer {

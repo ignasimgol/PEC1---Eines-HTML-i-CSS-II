@@ -220,6 +220,8 @@ const tick = () => {
 
 tick()
 
+gui.hide()
+
 let guiVisible = false;
 
 window.addEventListener('keydown', (event) => {

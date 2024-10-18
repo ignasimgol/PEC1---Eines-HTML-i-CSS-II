@@ -1,62 +1,154 @@
-
-<div class="main-container">
-    <div class="container">
-        <!-- Columna Izquierda -->
-        <div class="left-column">
-            <div>
-                <h1>L'Obesrvatori Fabra. La joia del Tibidabo que obeserva el cel de Barcelona</h1>
-                <p class="description">
-                    On Thursday, three Russian astronauts lifted off on the Moscow-17 spacecraft from the Sputnik 1 Satellite Launch Center deep in the Gobi Desert, heading for the Mir space station for a six-month stay.
-                </p>
-                <div class="meta">
-                    <span>UOC</span> | <span>Ignasi Muñoz</span> | <span>11 d'octubre, 2024</span>
+<section>
+    <div class="hero">
+        <div class="hero__container">
+            <div class="hero__left-column">
+                <div class="hero__text">
+                    <h1>L'Obesrvatori Fabra. La joia del Tibidabo que obeserva el cel de Barcelona</h1>
+                    <p class="hero__description">
+                        Pots premer la tecla "h" per desplegar el menú de control de la galáxia, creant així la posibilitat de modelar la teva experiència. Modifica el color, la quantitat d'estrelles i la seva mida entre d'altres coses.  
+                    </p>
+                    <div class="hero__meta">
+                        <span>UOC</span> | <span>Ignasi Muñoz</span> | <span>3 de novembre, 2024</span>
+                    </div>
                 </div>
-            </div>
-            <div>
+              
                 <picture>
-                  <source media="(max-width: 768px)" srcset="./assets/images/fabra5.2.jpeg" class="main-image-2">
-                  <img src="./assets/images/fabra5.jpeg" alt="Astronauta joven en traje espacial" class="main-image">
+                  <source media="(max-width: 1024px)" srcset="./assets/images/fabra5.2.jpeg">
+                  <source media="(min-width: 1025px)" srcset="./assets/images/fabra5.jpeg">
+                  <img src="./assets/images/fabra5.jpeg" alt="Observatori blanc i negre" class="hero__image">
                 </picture>
-              </div>
-        </div>
-
-        <!-- Columna Derecha -->
-        <div class="right-column">
-            <div class="article">
-                <img src="./assets/images/fabra3.jpg" alt="Cielo y nubes" class="article-image">
-                <div class="article-text">
-                    <span>Daniel Albarta</span> | <span>October 22, 2023</span>
-                    <h3>Washy Clouds and a Weepy Sky Floating</h3>
-                    <p>Our Planet | 8 mins read</p>
+            </div>
+    
+            <div class="hero__right-column">
+              <div class="hero__article">
+                <img src="./assets/images/fabra1.jpg" alt="Cielo y nubes" class="hero__article-image">
+                <div class="hero__article-text">
+                    <a href="#card1">
+                        <span>Cultura i ciència</span> | <span>Observatori Fabra</span>
+                        <h3>Icona cultural i científica de la ciutat condal</h3>
+                        <p>Fes click per saber mes</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="article">
-                <img src="./assets/images/fabra1.jpg" alt="Cohete despegando" class="article-image">
-                <div class="article-text">
-                    <span>Donn Robinson</span> | <span>October 21, 2023</span>
-                    <h3>Rocket Lab Expects to Resume Electron</h3>
-                    <p>Space | 4 mins read</p>
+            
+            <div class="hero__article">
+                <img src="./assets/images/fabra3.jpg" alt="Cohete despegando" class="hero__article-image">
+                <div class="hero__article-text">
+                    <a href="#card2">
+                        <span>Telescopi</span> | <span>Observatori Fabra</span>
+                        <h3>El telescopi històric de l'Observatori Fabra</h3>
+                        <p>Fes click per saber mes</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="article">
-                <img src="./assets/images/fabra2.jpg" alt="Exploración en Marte" class="article-image">
-                <div class="article-text">
-                    <span>Natalia Figman</span> | <span>October 21, 2023</span>
-                    <h3>Curiosity Rover Discovers New Evidence</h3>
-                    <p>Space | 7 mins read</p>
+            
+            <div class="hero__article">
+                <img src="./assets/images/fabra2.jpg" alt="Exploración en Marte" class="hero__article-image">
+                <div class="hero__article-text">
+                    <a href="#card3">
+                        <span>Cultura</span> | <span>Observatori Fabra</span>
+                        <h3>Arquitectura, events per famílies i espais de cultura</h3>
+                        <p>Fes click per saber mes</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="article">
-                <img src="./assets/images/fabra4.png" alt="Antena satelital" class="article-image">
-                <div class="article-text">
-                    <span>Antonio Roberto</span> | <span>October 19, 2023</span>
-                    <h3>Satellite Data Reveals Ancient</h3>
-                    <p>Space | 8 mins read</p>
+            
+            <div class="hero__article">
+                <img src="./assets/images/fabra4.png" alt="Antena satelital" class="hero__article-image">
+                <div class="hero__article-text">
+                    <a href="#card4">
+                        <span>Nits espectaculars</span> | <span>Observatori Fabra</span>
+                        <h3>Les nits a l'Observatori Fabra</h3>
+                        <p>Fes click per saber mes</p>
+                    </a>
                 </div>
+            </div>
+            
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section>
+    <div class="card__container">
+        <div class="card__box" id="card1">
+            <div class="card__text">
+              <h3>Icona cultural i científica de la ciutat condal</h3>
+              <p>L'Observatori Fabra és una icona científica i cultural de Barcelona, fundat l'any 1904. Situat a la muntanya del Tibidabo, l'Observatori combina recerca científica amb activitats de divulgació per al públic. Des del seu inici, ha estat dedicat a l'astronomia, la meteorologia i la sismologia, fent aportacions importants en aquests camps.</p>
+            </div>
+            <div class="card__image">
+              <img src="./assets/images/fabra1.jpg" alt="Description of the image">
+            </div>
+          </div>
+          
+          <div class="card__box" id="card2">
+            <div class="card__text">
+                <h3>El telescopi històric de l'Observatori Fabra</h3>
+                <p>El telescopi de l'Observatori Fabra de Barcelona és un refractor de 0,82 metres instal·lat el 1904 i és un dels més importants d'Espanya. Situat a 670 metres d'altura a la serra de Collserola, ofereix condicions d'observació excel·lents i ha estat utilitzat durant més d'un segle per a diverses investigacions astronòmiques. Actualment, el telescopi s'utilitza per a activitats d'observació pública, permetent als visitants veure cossos celestes com planetes i la lluna sota la guia d'astrònoms experts. A més, l'Observatori Fabra és considerat un bé d'interès cultural, contribuint al patrimoni científic de Catalunya.</p>
+              </div>
+            <div class="card__image">
+              <img src="./assets/images/fabra3.jpg" alt="Description of the image">
+            </div>
+          </div>
+
+          <div class="card__box" id="card3">
+            <div class="card__text">
+                <h3>Arquitectura, events per famílies i espais de cultura</h3>
+                <p>Amb més de 100 anys d'història, l'Observatori continua sent un referent no només per als científics, sinó també per als amants de l'astronomia i la cultura. La seva arquitectura modernista i la seva ubicació privilegiada el converteixen en un dels llocs més especials de la ciutat. També organitza esdeveniments especials com els sopars sota les estrelles, combinant ciència i gastronomia en un entorn incomparable.</p>
+              </div>
+            <div class="card__image">
+              <img src="./assets/images/fabra2.jpg" alt="Description of the image">
+            </div>
+          </div>
+
+          <div class="card__box" id="card4">
+            <div class="card__text">
+                <h3>Les nits a l'Observatori Fabra</h3>
+                <p>L'Observatori Fabra de Barcelona és un lloc fascinant per visitar a les nits, ja que ofereix activitats i esdeveniments d'astronomia. Aquí tens algunes opcions que podries considerar com l'observació estel·lar, visites guiades nocturnes o xerrades sobre temes astronòmics d'actualitat. És recomanable revisar el seu calendari d'activitats al seu lloc web oficial per conèixer els esdeveniments programats i les dates disponibles per a les visites nocturnes.</p>
+              </div>
+            <div class="card__image">
+              <img src="./assets/images/fabra4.png" alt="Description of the image">
+            </div>
+          </div>
+    </div>
+</section>
+
+<section>
+    <div class="info__accordion">
+        <div class="info__accordion-item">
+          <h3 class="info__accordion-title">Visites</h3>
+          <div class="info__accordion-content">
+            <p>Este es el contenido del primer desplegable.</p>
+            <p>Vistes <a href="https://observatorifabra.cat/visites/">aqui</a> </p>
+          </div>
+        </div>
+        <div class="info__accordion-item">
+          <h3 class="info__accordion-title">Cursos</h3>
+          <div class="info__accordion-content">
+            <p>Este es el contenido del segundo desplegable.</p>
+            <ul>
+              <ol> <a href="https://www.sternalia.com/ca/curs-astronomia-basica.html">Astronomia Bàsic</a></ol>
+              <ol> <a href="https://www.sternalia.com/ca/curs-astronomia-practica.html">Astronomia Pràctica</a></ol>
+              <ol> <a href="https://www.sternalia.com/ca/curs-de-meteorologia-basica.html">Metorologia Bàsica</a></ol>
+              <ol> <a href="https://www.sternalia.com/ca/curs-de-meteorologia-avacada.html">Metorologia Avançada</a></ol>
+            </ul>
+          </div>
+        </div>
+        <div class="info__accordion-item">
+          <h3 class="info__accordion-title">Jornades</h3>
+          <div class="info__accordion-content">
+            <p>Este es el contenido del tercer desplegable.</p>
+            <img src="./assets/images/fabra4.png" alt="Antena satelital" class="hero__article-image">
+          </div>
+        </div>
+        <div class="info__accordion-item">
+            <h3 class="info__accordion-title">Esdeveniments privats</h3>
+            <div class="info__accordion-content">
+              <p>També es pot reservar l'Observatori Fabra per tal de fer esdeveniments privats</p>
+              <p>Mes informació a la <a href="https://www.sternalia.com/ca/esdeveniments-privats.html">página oficial</a></p>
+              <img src="./assets/images/fabra4.png" alt="Antena satelital" class="hero__article-image">
+            </div>
+          </div>
+      </div>
+      
+</section>

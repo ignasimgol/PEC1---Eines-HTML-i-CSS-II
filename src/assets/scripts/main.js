@@ -241,17 +241,28 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
-// Manejo del temporizador para el toque prolongado
-let touchTimer = null;
-const touchDuration = 3000; // 3 segundos
+// Manejo de toques consecutivos
+let tapCount = 0;
+const maxTaps = 3; // Número máximo de toques necesarios
+const tapTimeout = 500; // Tiempo en milisegundos para reiniciar el contador de toques
+
+let lastTapTime = 0;
 
 window.addEventListener('touchstart', () => {
-    // Iniciar el temporizador
-    touchTimer = setTimeout(toggleGUI, touchDuration);
-});
+    const currentTime = new Date().getTime();
 
-window.addEventListener('touchend', () => {
-    // Cancelar el temporizador si el usuario levanta el dedo
-    clearTimeout(touchTimer);
-});
+    // Verificar si el tiempo entre toques es menor que el tiempo de reinicio
+    if (currentTime - lastTapTime < tapTimeout) {
+        tapCount++;
+    } else {
+        tapCount = 1; // Reiniciar el contador si ha pasado demasiado tiempo
+    }
 
+    lastTapTime = currentTime; // Actualizar el tiempo del último toque
+
+    // Comprobar si se han realizado suficientes toques consecutivos
+    if (tapCount === maxTaps) {
+        toggleGUI();
+        tapCount = 0; // Reiniciar el contador después de alternar el GUI
+    }
+});

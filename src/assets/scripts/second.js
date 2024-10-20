@@ -33,5 +33,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const cardContainer = document.querySelector('.card__container');
+const cards = [...document.querySelectorAll('.card__box')];
 
+function scrollCards() {
+    cards.forEach((card, i) => {
+        const cardTop = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
+        // Si la parte superior de la carta está dentro de la ventana del navegador
+        if (cardTop < windowHeight && cardTop > 0) {
+            const offset = (cardTop / windowHeight) * 0.3;
+            card.style.transform = `scale(${1 + offset})`;
+        } else {
+            card.style.transform = 'scale(1)'; // Resetear la escala cuando la tarjeta sale de la vista
+        }
+    });
+}
+
+window.addEventListener('scroll', scrollCards);

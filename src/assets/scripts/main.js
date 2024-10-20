@@ -220,18 +220,38 @@ const tick = () => {
 
 tick()
 
-gui.hide()
-
+// Inicializa el GUI y la visibilidad
+gui.hide();
 let guiVisible = false;
 
+// Función para alternar la visibilidad del GUI
+const toggleGUI = () => {
+    guiVisible = !guiVisible;
+    if (guiVisible) {
+        gui.show();
+    } else {
+        gui.hide();
+    }
+};
+
+// Evento para mostrar/ocultar GUI con la tecla 'h'
 window.addEventListener('keydown', (event) => {
     if (event.key === 'h') {
-        guiVisible = !guiVisible
-        if (guiVisible) {
-            gui.show()
-        } else {
-            gui.hide()
-        }
+        toggleGUI();
     }
-})
+});
+
+// Manejo del temporizador para el toque prolongado
+let touchTimer = null;
+const touchDuration = 3000; // 3 segundos
+
+window.addEventListener('touchstart', () => {
+    // Iniciar el temporizador
+    touchTimer = setTimeout(toggleGUI, touchDuration);
+});
+
+window.addEventListener('touchend', () => {
+    // Cancelar el temporizador si el usuario levanta el dedo
+    clearTimeout(touchTimer);
+});
 

@@ -23,6 +23,14 @@ body {
   color: #fff;
 }
 
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+
+}
+
 a {
   .svg-link {
     transition: color 0.3s ease;
@@ -99,6 +107,13 @@ a {
 
 .card {
   &__container {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3rem;
     margin-bottom: 3rem;
   }
 
@@ -113,11 +128,19 @@ a {
     margin: 1rem auto;
     padding: 10px;
     background-color: #221b1b;
-    width: 70%;
+    width: 100%;
+    height: 20%; 
+    display: flex;
+    position: sticky;
+    top: 20;
+    max-width: var(--max-width);
+    margin-bottom: 6rem;
   }
 
   &__text {
     flex: 1;
+    padding: 1rem;
+    width: 50%;
     padding: 1rem;
 
     h3 {
@@ -134,10 +157,16 @@ a {
   &__image {
     flex: 1;
     padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    height: 100%;
 
     img {
-      max-width: 100%;
-      height: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       border-radius: 5px;
     }
   }
@@ -146,7 +175,7 @@ a {
 .info {
   &__accordion {
     margin: 1rem auto;
-    width: 90%;
+    width: 82%;
     border: 1px solid #ccc;
 
     &-title {
@@ -162,6 +191,24 @@ a {
       padding: 15px;
       background-color: #251d1d;
       border-top: 1px solid #ccc;
+    }
+
+    &-content ul {
+      list-style-type: disc; 
+      padding-left: 20px; 
+    }
+    
+    &-content li {
+      margin-bottom: 5px; 
+    }
+
+    &-content a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    &-content a:hover {
+      color: yellow;
     }
 
     &-item.active {
@@ -275,6 +322,13 @@ body {
 }
 
 @media (max-width: 1032px) {
+
+  h2 {
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .hero__container {
     padding: 10px;
     flex-direction: column;
@@ -320,6 +374,7 @@ body {
   .card__box {
     width: 100%;
     flex-direction: column;
+    width: 90%;
 
     p {
       font-size: 0.7rem;
@@ -332,4 +387,10 @@ body {
     }
   }
 
+  .card__text {
+    width: 100%;
+  }
+
 }
+
+

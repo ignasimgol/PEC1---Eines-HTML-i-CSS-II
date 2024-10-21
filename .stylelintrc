@@ -1,16 +1,15 @@
 {
-    "extends": ["stylelint-config-recommended-scss"],
-    "plugins": [
-      "stylelint-scss"
-    ],
-    "rules": {
-      "indentation": 2,
-      "color-hex-length": "short",
-      "max-nesting-depth": 3,
-      "selector-max-id": 0,
-      "scss/at-rule-no-unknown": true,
-      "scss/dollar-variable-pattern": "^foo",
-      "no-descending-specificity": null
-    }
+  "extends": ["stylelint-config-recommended-scss"],
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "rules": {
+    "order/properties-alphabetical-order": true,
+    "color-hex-length": "short",
+    "max-nesting-depth": 5,
+    "selector-max-id": 0,
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-pattern": "^[_a-z]+[a-zA-Z0-9-]*$",
+    "no-descending-specificity": null
   }
+}
+
   

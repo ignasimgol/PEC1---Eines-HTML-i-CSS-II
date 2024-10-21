@@ -47,11 +47,12 @@
     "sharp": "^0.31.3",
     "stylelint": "^16.9.0",
     "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^6.7.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
-    "gsap": "^3.12.5",
     "lil-gui": "^0.19.2",
     "three": "^0.169.0"
   }

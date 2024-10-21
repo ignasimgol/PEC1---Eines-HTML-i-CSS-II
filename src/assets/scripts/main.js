@@ -113,7 +113,6 @@ const generateGalaxy = () => {
 gui.add(parameters, 'count').min(100).max(1000000).step(100).onFinishChange(generateGalaxy)
 gui.add(parameters, 'size').min(0.001).max(0.1).step(0.001).onFinishChange(generateGalaxy)
 gui.add(parameters, 'radius').min(0.01).max(20).step(0.01).onFinishChange(generateGalaxy)
-gui.add(parameters, 'branches').min(2).max(20).step(1).onFinishChange(generateGalaxy)
 gui.add(parameters, 'spin').min(- 5).max(5).step(0.001).onFinishChange(generateGalaxy)
 gui.add(parameters, 'randomness').min(0).max(2).step(0.001).onFinishChange(generateGalaxy)
 gui.add(parameters, 'randomnessPower').min(1).max(10).step(0.001).onFinishChange(generateGalaxy)
@@ -194,9 +193,6 @@ const tick = () => {
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
 
-    // Animate camera based on scroll (optional if needed for your case)
-    // camera.position.y = - scrollY / sizes.height * objectsDistance
-
     // Animate camera group based on mouse movement (parallax effect)
     const parallaxX = cursor.x * 0.5
     const parallaxY = -cursor.y * 0.5
@@ -220,7 +216,7 @@ const tick = () => {
 
 tick()
 
-// Inicializa el GUI y la visibilidad
+// GUI open/close
 gui.hide();
 let guiVisible = false;
 
@@ -234,35 +230,33 @@ const toggleGUI = () => {
     }
 };
 
-// Evento para mostrar/ocultar GUI con la tecla 'h'
+// GUI tecla h
 window.addEventListener('keydown', (event) => {
     if (event.key === 'h') {
         toggleGUI();
     }
 });
 
-// Manejo de toques consecutivos
+// GUI tres toques
 let tapCount = 0;
-const maxTaps = 3; // Número máximo de toques necesarios
-const tapTimeout = 500; // Tiempo en milisegundos para reiniciar el contador de toques
+const maxTaps = 3;
+const tapTimeout = 500; 
 
 let lastTapTime = 0;
 
 window.addEventListener('touchstart', () => {
     const currentTime = new Date().getTime();
 
-    // Verificar si el tiempo entre toques es menor que el tiempo de reinicio
     if (currentTime - lastTapTime < tapTimeout) {
         tapCount++;
     } else {
-        tapCount = 1; // Reiniciar el contador si ha pasado demasiado tiempo
+        tapCount = 1; 
     }
 
-    lastTapTime = currentTime; // Actualizar el tiempo del último toque
+    lastTapTime = currentTime;
 
-    // Comprobar si se han realizado suficientes toques consecutivos
     if (tapCount === maxTaps) {
         toggleGUI();
-        tapCount = 0; // Reiniciar el contador después de alternar el GUI
+        tapCount = 0; 
     }
 });
